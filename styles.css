@@ -144,11 +144,10 @@ display: none;
   display: none;
 }
 
-  .container {
-    margin-top: 80px;
+ .container {
+    margin: 20px auto;
     display: flex;
     width: 100%;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -158,45 +157,27 @@ display: none;
 
 @media (max-width: 480px) {
   body {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .container {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   
   .btn {
-    margin: 25px;
-    display: inline-block;
-    height: 80px;
-    width: 80px;
-    border: 5px solid black;
-    border-radius: 20%;
-  }
-
-  #level-title {
-    font-family: "Press Start 2P", cursive;
-    font-size: 2rem;
-    margin: 5%;
-    color: #fef2bf;
-  }
-
-  #level-title.game-over {
-    display: none;
-  }
-
-  .container {
-    margin-top: 80px;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  button#startBtn {
-    height: auto;
-    width: auto;
-    padding: 10px 15px;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
   }
 }
