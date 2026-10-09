@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
   background-color: #011f3f;
@@ -8,6 +12,14 @@ body {
   font-size: 3rem;
   margin: 5%;
   color: #fef2bf;
+}
+
+.mobile-H1 {
+  display: none;
+}
+
+.mobile-H1.game-over {
+ display: none;
 }
 
 .container {
@@ -58,12 +70,92 @@ body {
   background-color: grey;
 }
 
+.start-btn {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  background-color: #fef2bf;
+  color: #011f3f;
+  padding: 15px 30px;
+  border: 4px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.start-btn.is-playing {
+  display: none;
+}
+
+
+
+@media (hover: hover) {
+  .start-btn:hover {
+    background-color: white;
+    box-shadow: 0 0 15px white;
+  }
+}
+
+.start-btn:active {
+  background-color: white;
+  box-shadow: 0 0 15px white;
+  transform: scale(0.98);
+}
+
+
+
+@media (max-width: 720px) {
+  .mobile-H1 {
+    display: block;
+    font-family: "Press Start 2P", cursive;
+    font-size: 2rem;
+    margin: 5%;
+    color: #fef2bf;
+  }
+ 
+  
+  #level-title {
+    display: none;
+  }
+  
+  button.start-btn {
+    height: auto;
+    width: auto;
+    padding: 15px 23px;
+  }
+  
+  #level-title.game-over {
+display: none;
+}
+  
+  .mobile-H1.game-over {
+  min-height: 80px;
+  height: fit-content;
+  background-color: red;
+  opacity: 0.8;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn.is-playing{
+  display: none;
+}
+
+}
+
 @media (max-width: 520px) {
+  body {
+    min-height: 100vh;
+  }
+  
   .btn {
     margin: 25px;
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border: 5px solid black;
     border-radius: 20%;
   }
@@ -76,20 +168,22 @@ body {
   }
 
   #level-title.game-over {
-    min-height: 60px;
-    height: fit-content;
-    background-color: red;
-    opacity: 0.8;
-    padding: 12px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 
   .container {
-    display: block;
+    margin-top: 80px;
+    display: flex;
     width: 100%;
-    margin: auto;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button#startBtn {
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
   }
 }
